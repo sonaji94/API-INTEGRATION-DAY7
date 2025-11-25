@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="box"></div>
+
+<script>
+fetch("https://dummyjson.com/products")
+  .then(res => res.json())
+  .then(data => { console.log(data.products);
+    let html = data.products.map(p => `<p>${p.title} - $${p.price}</p> `).join("");
+    document.getElementById("box").innerHTML = html;
+     });
+</script>
+
+</body>
+</html>

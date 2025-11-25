@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ecommerce Webpage</title>
+    <script>
+       // https://dummyjson.com/recipes
+        //https://dummyjson.com/products
+        URL= "https://dummyjson.com/products"
+        fetch(URL)
+        .then(data => data.json())
+        .then(data =>data.products))
+       .then(data => console.log(data))
+       document.body.innerHTML= data.map(product => `
+        
+     </script>
 </head>
 <body>
     
